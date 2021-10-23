@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Blastoff - Exercício 05</title>
+  </head>
+  <body>
+    <form class="form">
+      <label for="var-1" class="primeiro-numero">Digite um número: </label>
+      <input class="num-1" type="text" placeholder="primeiro número" name="variavel1"/>
+      <br />
+      <br />
+      <label for="variavel-2" class="segundo-numero">Digite outro número: </label>
+      <input class="numero-2" type="text" placeholder="segundo número" name="variavel2"/>
+      <br />
+      <button class="btn-calcular" type="submit">Calcular</button>
+  </form>
+  <div class="resp">
+
+  </div>
+</body>
+<script type="text/javascript">
+  let botaoAdicionar = document.querySelector(".btn-calcular");
+  
+  botaoAdicionar.addEventListener("click", function(event) {
+    event.preventDefault();
+    let form = document.querySelector(".form");
+    let n1 = parseInt(form.variavel1.value);
+    let n2 = parseInt(form.variavel2.value);
+    let resposta = document.querySelector(".resp");
+      if(n1>n2 || n1 == n2) {
+        var resultado = n1/n2;
+        if(Number.isInteger(resultado)){
+          resposta.textContent = 'Os números são múltiplos';
+        }else{
+          resposta.textContent ='Os números não são múltiplos';
+        };
+      }else {
+        var resultado = n2/n1;
+        if(Number.isInteger(resultado)){
+          resposta.textContent = 'Os números são múltiplos';
+        }else{
+          resposta.textContent = 'Os números não são múltiplos';
+        };
+      }
+  });
+</script>
+  </body>
+</html>

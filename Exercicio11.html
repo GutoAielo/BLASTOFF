@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blastoff - Exercício 11</title>
+  </head>
+  <body></body>
+  <script type="text/javascript">
+    let arrayA = [1, 2, 3, 4],
+      arrayB = [1, 2, 5, 8]
+
+    Array.prototype.intersect = function intersect(a, ...b) {
+      const c = function (a, b) {
+        b = new Set(b)
+        return a.filter(a => b.has(a))
+      }
+      return undefined === a ? this : intersect.call(c(this, a), ...b)
+    }
+
+    console.log(arrayA.intersect(arrayB))
+    alert('vai!')
+  </script>
+</html>

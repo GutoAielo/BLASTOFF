@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- A fómula proposta pelo exercício é a de convertermos Fahrenheit em Celsius, optamos então por usar a fórmula que converte Celsius para Fahrenheit *F=9/5(C=+32) -->
+    <title>Blastoff - Exercício 04</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let celsius = parseFloat(prompt('Temperatura em graus Celsius: '))
+      let fahrenheit = (9 * celsius) / 5 + 32
+
+      document.write(
+        'Temperatura em graus Fahrenheit = ',
+        fahrenheit.toFixed(1) + '°'
+      )
+    </script>
+  </body>
+</html>
